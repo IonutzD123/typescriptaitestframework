@@ -1,0 +1,52 @@
+{
+  "name": "typescriptaitestframework",
+  "version": "1.0.0",
+  "description": "Test framework for UI and API with TypeScript and Playwright\r TypeScript\r Playwright Test\r Playwright MCP\r Stagehand or custom LLM planner\r Playwright APIRequestContext\r Ajv/Zod\r Pact\r WireMock or Prism\r k6\r Allure\r GitHub Actions\r Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:contract": "playwright test tests/contract",
+    "test:agent": "playwright test tests/agent",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:docker": "docker run --rm --env-file .env.docker ai-qa-framework",
+    "test:performance": "k6 run tests/performance/test.js",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "report": "playwright show-report",
+    "clean": "powershell -Command \"Remove-Item -Recurse -Force allure-results,allure-report,playwright-report,test-results -ErrorAction SilentlyContinue\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonutzD123/typescriptaitestframework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IonutzD123/typescriptaitestframework/issues"
+  },
+  "homepage": "https://github.com/IonutzD123/typescriptaitestframework#readme",
+  "devDependencies": {
+    "@pact-foundation/pact": "^16.4.0",
+    "@playwright/mcp": "^0.0.75",
+    "@playwright/test": "^1.60.0",
+    "@stoplight/prism-cli": "^4.7.0",
+    "@types/node": "^25.9.0",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.8.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.4.0",
+    "prettier": "^3.8.3"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "^3.4.0",
+    "ajv": "^8.20.0",
+    "zod": "^4.4.3"
+  }
+}
