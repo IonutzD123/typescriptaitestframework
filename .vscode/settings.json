@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "playwright.reuseBrowser": true,
+  "files.exclude": {
+    "node_modules": true,
+    "test-results": true,
+    "playwright-report": true,
+    "allure-results": true,
+    "allure-report": true
+  }
+}
